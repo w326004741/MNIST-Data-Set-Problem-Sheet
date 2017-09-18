@@ -14,4 +14,4 @@ magic = f.read(4) #读取4个文件
 print(int.from_bytes(magic,'big'))
 
 
-111
+111111
