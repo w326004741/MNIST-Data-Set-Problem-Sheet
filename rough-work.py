@@ -12,6 +12,3 @@ magic = f.read(4) #读取4个文件
 #In binary this is : 00000000 00000000 00001000 00000011
 
 print(int.from_bytes(magic,'big'))
-
-
-111111
