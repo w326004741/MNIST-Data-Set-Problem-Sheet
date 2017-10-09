@@ -10,10 +10,11 @@
 # function to read labels from .gz file
 def read_labels_from_file(filename):
     import gzip
+    
     with gzip.open(filename, 'rb') as f:
         magic = f.read(4)   # read first 4 bytes
-        magic = int.from_bytes(magic,'big')
-        print("Magic Number is: ", magic)  # invoke magic
+        # magic = int.from_bytes(magic,'big')
+        print("Magic Number is: " +str(int.from_bytes(magic,'big')))  # invoke magic
         
         nolab = f.read(4) # read next 4 bytes
         nolab = int.from_bytes(nolab,'big')
@@ -35,10 +36,11 @@ train_labels = read_labels_from_file('/Users/weichenwang/Year4/Read-Digits-Image
 # function to read images from .gz file
 def read_images_from_file(filename):
     import gzip # use python open a file
+    #import numpy as np
     with gzip.open(filename, 'rb') as f:
         magic = f.read(4)   # read first 4 bytes
-        magic = int.from_bytes(magic,'big')
-        print("Magic is: ", magic)  # invoke magic
+        # magic = int.from_bytes(magic,'big')
+        print("Magic is: " +str(int.from_bytes(magic,'big')))  # invoke magic
         
         noimg = f.read(4)   # read next 4 bytes
         noimg = int.from_bytes(noimg,'big')
@@ -58,6 +60,12 @@ def read_images_from_file(filename):
         #     labels.append(f.read(1))
         
         # save images to a list
+        
+        #buffer = f.read(norow * nocol * noimg)
+        #images = np.frombuffer(buffer, dtype= np.uint8).astype(np.float32)
+        #images = images.reshape(noimg, norow, nocol,1) 
+
+
         images = []
         for i in range(noimg):
             rows = []

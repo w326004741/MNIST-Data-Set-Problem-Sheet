@@ -8,9 +8,17 @@ import numpy as np
 # using training set image  
 # train_images[4999] ＝ 2 and train_labels[4999] = 2
 # print(train_labels[4999]) output value is 2
-for row in ReadDataFiles.train_images[4999]:
+# should be a 2.
+# for row in train_images[4999]:
+    #for col in row:
+       #print('.' if col <= 127 else '#', end='')
+    #print()
+
+img = ReadDataFiles.train_images[4]
+img = np.array(img)
+for row in img:
     for col in row:
-        #da ying
+        #打印以.开始，以空格‘ ’ 结尾
        print('.' if col <128 else '#', end='')
     print()
 
