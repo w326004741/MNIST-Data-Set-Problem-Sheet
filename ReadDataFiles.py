@@ -10,7 +10,6 @@
 # function to read labels from .gz file
 def read_labels_from_file(filename):
     import gzip
-    
     with gzip.open(filename, 'rb') as f:
         magic = f.read(4)   # read first 4 bytes
         # magic = int.from_bytes(magic,'big')
@@ -29,8 +28,8 @@ def read_labels_from_file(filename):
         #print(labels)
     return labels 
 
-test_labels = read_labels_from_file('/Users/weichenwang/Year4/Read-Digits-Image-Files-Problem-sheet/Data/t10k-labels-idx1-ubyte.gz')
-train_labels = read_labels_from_file('/Users/weichenwang/Year4/Read-Digits-Image-Files-Problem-sheet/Data/train-labels-idx1-ubyte.gz')
+test_labels = read_labels_from_file('/Gitrepository/Read-Digits-Image-Files-Problem-sheet/Data/t10k-labels-idx1-ubyte.gz')
+train_labels = read_labels_from_file('/Gitrepository/Read-Digits-Image-Files-Problem-sheet/Data/train-labels-idx1-ubyte.gz')
 #print(train_labels[4999]) #print out the number of picture
 
 # function to read images from .gz file
@@ -79,8 +78,8 @@ def read_images_from_file(filename):
         #labels = [int.from_bytes(label,'big') for label in labels]
     return images
 
-test_images = read_images_from_file('/Users/weichenwang/Year4/Read-Digits-Image-Files-Problem-sheet/Data/t10k-images-idx3-ubyte.gz')
-train_images = read_images_from_file('/Users/weichenwang/Year4/Read-Digits-Image-Files-Problem-sheet/Data/train-images-idx3-ubyte.gz')
+test_images = read_images_from_file('/Gitrepository/Read-Digits-Image-Files-Problem-sheet/Data/t10k-images-idx3-ubyte.gz')
+train_images = read_images_from_file('/Gitrepository/Read-Digits-Image-Files-Problem-sheet/Data/train-images-idx3-ubyte.gz')
 #print(train_images[4999])
 
 #should be a 2.
