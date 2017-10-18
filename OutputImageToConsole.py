@@ -19,6 +19,7 @@ img = np.array(img)
 for row in img:
     for col in row:
         #打印以.开始，以空格‘ ’ 结尾
+        # '.' = begin, '' = end, '#' show char
        print('.' if col <128 else '#', end='')
     print()
 
