@@ -3,7 +3,7 @@
 > Lecturer: Dr Ian McLoughlin  
 Solutions to the [Read Digits Image Files problem sheet](https://github.com/w326004741/MNIST-Data-Set-Problem-Sheet/wiki/MNIST-Data-Problem-Sheet)
 
-These files work with the famous [MNIST](http://yann.lecun.com/exdb/mnist/) data set. Please download the four data files from that website and place them (as gz files) in a subfolder called `data/`.
+These files work with the famous [MNIST](http://yann.lecun.com/exdb/mnist/) data set. Please download the four data files from that [website](http://yann.lecun.com/exdb/mnist/) and place them (as gz files) in a subfolder called `data/`.
 
 ## How to use this repository
 1. You must be have [Python 3.x](https://www.python.org/downloads/) and `Git` installed in your local.
